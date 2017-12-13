@@ -40,3 +40,12 @@ which should yield the executable file *forward*, but other compilers should wor
 - output file name; output files will have ".txt" and ".log" appended.
 - flag to indicate when bottleneck should occur. 0 means before first growth era, 1 means before second era.
 
+The allele frequency distribution output will be in file <filename>.txt and a log of the run in <filename>.log.
+
+The provided sample scripts, run_250kya_8k.pl and run_100kya_4k.pl, show the parameters I used to generate scenarios with a bottleneck 250,000 years ago/final population size ~8000 and with a bottleneck 100,000 years ago/final population size ~4000, respectively. 
+
+I have included some R code. I use it to scale up simulated output to compare with real human genomes, normalize the pre-bottleneck population size to match the 1000 Geneomes data in the 0.6 to 0.7 range, and plot both simulated and real data. If you set the working directory in R to be where you have put the code and 
+```
+source("plotPublic.R")
+```
+it should plot the 100ky/4k data (assuming you have the appropriate output file lying about).
