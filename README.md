@@ -27,4 +27,16 @@ which should yield the executable file *forward*, but other compilers should wor
 *forward* is run from the command line. Model parameters are supplied through a bevy of command line arguments when executing the program. The user must specify, in order, the following:
 
 
-- selection coefficient (positive float
+- selection coefficient (positive for purifying selection); set to 0.0 for neutral drift.
+- initial population size (number of diploid individuals).
+- fractional growth rate for first growth era; a value of 0.01 corresponds to 1% growth per generation.
+- length of first growth era in generations.
+- bottleneck population size.
+- fractional growth rate for 2nd growth era.
+- length of second growth era in generations.
+- optional sample size, if final output represents a small sample of full population. (I haven't tested this option in a long time.)
+- mutation rate, in new mutations per generation. One generally simulates a tiny genome (e.g. 0.5 mutations/generation, or about 1% of the true rate for humans) and scales the output up.
+- starting time for purifying selection to kick in, in generations (after burn-in); set to -1 for constant selection. Irrelevant if s = 0.
+- output file name; output files will have ".txt" and ".log" appended.
+- flag to indicate when bottleneck should occur. 0 means before first growth era, 1 means before second era.
+
