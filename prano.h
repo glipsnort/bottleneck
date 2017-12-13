@@ -1,0 +1,1 @@
+int prano( double xm );
