@@ -22,3 +22,4 @@ plotSim(d, "Bottleneck 100 kya (pop size = 4k)", "100 kya simulation")
 #d = read.delim("250kya_8k.txt")
 #plotSim(d, "Bottleneck 250 kya (pop size = 8k)", "250 kya simulation")
 
+}
